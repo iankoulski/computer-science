@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class ReverseVowelsTest 
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public ReverseVowelsTest( String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( ReverseVowelsTest.class );
     }
 
     /**
@@ -33,6 +33,9 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+		com.iankoulski.problems.leetcode.ReverseVowels.main(new String[] {"This is a test"});
+		com.iankoulski.problems.leetcode.ReverseVowels rv = new com.iankoulski.problems.leetcode.ReverseVowels();
+		String rvs = rv.getSolution().reverseVowels("This is a test");
+        assertTrue( "Thes as i tist".equals(rvs) );
     }
 }

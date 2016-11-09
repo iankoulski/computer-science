@@ -18,6 +18,7 @@
     <module>algorithms</module>
     <module>types</module>
     <module>structures</module>
+    <module>problems</module>
   </modules>
 
 </project>
