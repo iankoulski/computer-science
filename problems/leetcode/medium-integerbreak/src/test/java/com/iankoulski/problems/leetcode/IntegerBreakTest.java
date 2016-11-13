@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class IntegerBreakTest 
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public IntegerBreakTest( String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( IntegerBreakTest.class );
     }
 
     /**
@@ -33,6 +33,9 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+		com.iankoulski.problems.leetcode.IntegerBreak.main(new String[] {"16"});
+		com.iankoulski.problems.leetcode.IntegerBreakSolution ibs = new com.iankoulski.problems.leetcode.IntegerBreakSolution();
+		int v = ibs.integerBreak(16);
+        assertTrue( v==324 );
     }
 }
