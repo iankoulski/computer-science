@@ -1,4 +1,4 @@
-package com.iankoulski.problems.ccibook.oneaway;
+package com.iankoulski.problems.ccibook.arrays;
 
 
 // One Away
@@ -22,21 +22,22 @@ if chars are not the same, check next char in each string (insert or delete case
 public class DiffChecker {
     
     public static void main( String[] args ){
-    
+		System.out.println("\n\nvvvvvvvvvvvvvvvvvv One Away Diff Checker vvvvvvvvvvvvvvvvvvvvv\n");    
         if ( args!=null && args.length >= 2){
             DiffChecker dc = new DiffChecker();
-            System.out.println(dc.isOneEditAway(args[0],args[1]));
+            System.out.println("String one: " + args[0]);
+            System.out.println("String two: " + args[1]);
+            System.out.println("One edit away? " + dc.isOneEditAway(args[0],args[1]));
         }else{
             System.out.println("\nInsufficient number of arguments\nUsage: DiffChecker <string1> <string2>");
         }
-        
+		System.out.println("\n^^^^^^^^^^^^^^^^^^ End One Away Diff Checker ^^^^^^^^^^^^^^^^^^^^^\n\n");        
     }
 
     boolean isOneEditAway(String str1, String str2){
         int len1=str1.length(), len2=str2.length(); 
         if (Math.abs(len2-len1) >1) return false; // two inserts/deletes away in best case scenario
-        int maxlen=Math.max(len1,len2);
-        int cntInsert=0, cntDelete=0, cntReplace=0;
+        int cntInsert = 0, cntDelete = 0, cntReplace = 0;
         char c1,c2;
         int index1=0, index2=0;
         while(index1<len1 && index2<len2){

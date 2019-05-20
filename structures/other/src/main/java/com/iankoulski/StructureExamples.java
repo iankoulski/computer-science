@@ -18,7 +18,7 @@ public class StructureExamples
 
         System.out.println("Testing collections ...");
 	t o = new t("name","alex");
-	List al = new ArrayList();
+	List<Object> al = new ArrayList<Object>();
 	al.add("S1");
 	al.add("S1");
 	al.add("s2");
@@ -29,7 +29,7 @@ public class StructureExamples
 	al.add(o);
 	System.out.println("ArrayList: " + al.toString());
 
-        Set ss = new HashSet();
+    Set<Object> ss = new HashSet<Object>();
 	ss.add("S1");
 	ss.add("S1");
 	ss.add("s2");

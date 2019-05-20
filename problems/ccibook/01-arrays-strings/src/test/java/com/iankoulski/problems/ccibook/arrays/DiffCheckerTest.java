@@ -1,4 +1,4 @@
-package com.iankoulski.problems.ccibook.oneaway;
+package com.iankoulski.problems.ccibook.arrays;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -35,7 +35,7 @@ public class DiffCheckerTest
     public void testApp()
     {   
         String[] input1 = {"pale","pales"};
-        com.iankoulski.problems.ccibook.oneaway.DiffChecker.main(input1);
+        com.iankoulski.problems.ccibook.arrays.DiffChecker.main(input1);
         assertTrue(true);
     }
 

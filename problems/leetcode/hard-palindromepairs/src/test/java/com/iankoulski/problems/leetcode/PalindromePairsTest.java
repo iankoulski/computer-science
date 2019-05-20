@@ -4,7 +4,6 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import java.util.*;
-import com.iankoulski.problems.leetcode.*;
 
 /**
  * Unit test for simple App.

@@ -7,7 +7,7 @@
     <artifactId>ccibook</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.iankoulski.problems.ccibook.01-arrays-strings</groupId>
+  <groupId>com.iankoulski.problems.ccibook</groupId>
   <artifactId>01-arrays-strings</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>01-arrays-strings</name>
