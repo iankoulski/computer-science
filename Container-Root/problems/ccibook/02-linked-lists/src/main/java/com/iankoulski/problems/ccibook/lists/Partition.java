@@ -16,6 +16,9 @@ output: 3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
 Use two pointers, one always points to the beginning, and one moves to next element 
 until it finds an element less than the pivot, then inserts it in the beginning.
 Solution provided using singly-linked list
+
+Space complexity: O(1)
+Time complexity: O(n)
 */
 
 /*
