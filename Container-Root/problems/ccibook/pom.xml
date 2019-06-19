@@ -24,5 +24,6 @@
   </dependencies>
   <modules>
     <module>01-arrays-strings</module>
+    <module>02-linked-lists</module>
   </modules>
 </project>
