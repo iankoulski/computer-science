@@ -1,6 +1,6 @@
 package com.iankoulski.problems.ccibook.lists;
 
-/* 2.4 Partition
+/*Partition
 Write code to partition a linked list around a value x, such that all nodes less than x 
 come before all nodes greater than or equal to x. If x is contained within the list, 
 the values of x only need to be after the elements less than x. 
@@ -55,17 +55,7 @@ next = null
 return first
 */
 
-class Node {
-    Node next = null;
-	int data;
-    
-    public Node(int d){
-		data = d;
-	}
-
-}
-
-class Partition {
+public class Partition {
 
     public static void main(String[] args){
         Node n1 = new Node(3);
