@@ -25,5 +25,6 @@
   <modules>
     <module>01-arrays-strings</module>
     <module>02-linked-lists</module>
+    <module>03-stacks-queues</module>
   </modules>
 </project>
