@@ -1,0 +1,11 @@
+package com.iankoulski.problems.ccibook.tg;
+
+public class BinaryTreeNode<T> {
+    public T data;
+    public BinaryTreeNode<T> left;
+    public BinaryTreeNode<T> right;
+
+    public BinaryTreeNode(T d){
+        this.data=d;
+    }
+}
