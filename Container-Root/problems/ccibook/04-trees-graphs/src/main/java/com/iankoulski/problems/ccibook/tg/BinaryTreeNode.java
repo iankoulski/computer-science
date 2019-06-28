@@ -8,4 +8,8 @@ public class BinaryTreeNode<T> {
     public BinaryTreeNode(T d){
         this.data=d;
     }
+
+    public String toString(){
+        return data.toString();
+    }
 }
