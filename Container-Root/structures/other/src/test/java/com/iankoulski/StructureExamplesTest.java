@@ -1,39 +1,28 @@
 package com.iankoulski;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class StructureExamplesTest
-    extends TestCase
+public class StructureExamplesTest extends TestClass
 {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public StructureExamplesTest( String testName )
+    public StructureExamplesTest()
     {
-        super( testName );
+        super(StructureExamplesTest.class);
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( StructureExamplesTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
+    @Test    
     public void testApp()
     {
     	com.iankoulski.StructureExamples.main(null);
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 }

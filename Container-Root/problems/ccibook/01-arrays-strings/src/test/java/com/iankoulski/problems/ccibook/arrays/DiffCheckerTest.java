@@ -1,72 +1,69 @@
 package com.iankoulski.problems.ccibook.arrays;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class DiffCheckerTest 
-    extends TestCase
+public class DiffCheckerTest extends TestClass
 {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public DiffCheckerTest( String testName )
+    public DiffCheckerTest( )
     {
-        super( testName );
+        super( DiffCheckerTest.class );
         dc = new DiffChecker();
     }
 
     private DiffChecker dc;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( DiffCheckerTest.class );
-    }
-
     // test main
+    @Test
     public void testApp()
     {   
         String[] input1 = {"pale","pales"};
         com.iankoulski.problems.ccibook.arrays.DiffChecker.main(input1);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     // pale, ple -> true
+    @Test
     public void testPalePle()
     {
-        assertTrue(dc.isOneEditAway("pale","ple"));
+        Assert.assertTrue(dc.isOneEditAway("pale","ple"));
     }
 
     // ple, pale -> true
+    @Test
     public void testPlePale()
     {
-        assertTrue(dc.isOneEditAway("ple","pale"));
+        Assert.assertTrue(dc.isOneEditAway("ple","pale"));
     }    
 
     // pales, pale -> true
+    @Test
     public void testPalesPale()
     {
-        assertTrue(dc.isOneEditAway("pales","pale"));
+        Assert.assertTrue(dc.isOneEditAway("pales","pale"));
     }    
 
     // pale, bale -> true
+    @Test
     public void testPaleBale()
     {
-        assertTrue(dc.isOneEditAway("pale","bale"));
+        Assert.assertTrue(dc.isOneEditAway("pale","bale"));
     }       
 
     // pale, bake -> false
+    @Test
     public void testPaleBake()
     {
-        assertFalse(dc.isOneEditAway("pale","bake"));
+        Assert.assertFalse(dc.isOneEditAway("pale","bake"));
     }    
 
 

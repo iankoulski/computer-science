@@ -1,39 +1,29 @@
 package com.iankoulski.algorithms.sort;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+    extends TestClass
 {
     /**
      * Create the test case
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public AppTest()
     {
-        super( testName );
+        super( AppTest.class );
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
+    @Test
     public void testApp()
     {
         com.iankoulski.algorithms.sort.MergeSortExample.main(null);
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 }

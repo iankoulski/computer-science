@@ -2,40 +2,28 @@ package com.iankoulski.problems.ccibook.sq;
 
 import com.iankoulski.problems.ccibook.sq.*;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class AnimalShelterTest 
-    extends TestCase
+public class AnimalShelterTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AnimalShelterTest( String testName )
-    {
-        super( testName );
-    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
+    public AnimalShelterTest( )
     {
-        return new TestSuite( AnimalShelterTest.class );
+        super( AnimalShelterTest.class );
     }
 
     // test main
+    @Test
     public void testApp()
     {   
         System.out.println("App test:");
         com.iankoulski.problems.ccibook.sq.AnimalShelter.main(null);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     // Test Data
@@ -53,27 +41,30 @@ public class AnimalShelterTest
     }
 
     // dequeueAny should return the animal that got in the shelter first -> Kit
+    @Test
     public void testDequeueAny()
     {
         AnimalShelter shelter = getTestShelter();
         Animal a = shelter.dequeueAny();
-        assertEquals("Kit", a.toString());
+        Assert.assertEquals("Kit", a.toString());
     }
 
     // dequeueCat should return the Cat that got in the shelter first -> Kit
+    @Test
     public void testDequeueCat()
     {
         AnimalShelter shelter = getTestShelter();
         Animal a = shelter.dequeueCat();
-        assertEquals("Kit", a.toString());
+        Assert.assertEquals("Kit", a.toString());
     }
 
     // dequeueDog should return the Dog that got in the shelter first -> Ruf
+    @Test
     public void testDequeueDog()
     {
         AnimalShelter shelter = getTestShelter();
         Animal a = shelter.dequeueDog();
-        assertEquals("Ruf", a.toString());
+        Assert.assertEquals("Ruf", a.toString());
     }
 
 }

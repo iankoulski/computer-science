@@ -1,42 +1,29 @@
 package com.iankoulski.problems.ccibook.sq;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class SortStackTest 
-    extends TestCase
+public class SortStackTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public SortStackTest( String testName )
+    public SortStackTest()
     {
-        super( testName );
+        super( SortStackTest.class );
         ss = new SortStack();
     }
 
     private SortStack ss;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( SortStackTest.class );
-    }
-
     // test main
+    @Test
     public void testApp()
     {   
         System.out.println("App test:");
         com.iankoulski.problems.ccibook.sq.SortStack.main(null);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     Stack<Integer> getTestStack(){
@@ -62,6 +49,7 @@ public class SortStackTest
         return new Stack<Integer>(n1);
     } 
 
+    @Test
     public void testStackSorting()
     {
         Stack<Integer> s = getTestStack();
@@ -69,7 +57,7 @@ public class SortStackTest
         Stack<Integer> result = ss.sortStack(s);
         String strResult=result.getString();
         System.out.println("Output: " + strResult);
-        assertEquals("3->3->4->6->7->8->10->15->21",strResult);   
+        Assert.assertEquals("3->3->4->6->7->8->10->15->21",strResult);   
     }
 
 }

@@ -2,40 +2,27 @@ package com.iankoulski.problems.ccibook.tg;
 
 import com.iankoulski.problems.ccibook.tg.*;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class RouteBetweenNodesTest 
-    extends TestCase
+public class RouteBetweenNodesTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public RouteBetweenNodesTest( String testName )
+    public RouteBetweenNodesTest( )
     {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( RouteBetweenNodesTest.class );
+        super( RouteBetweenNodesTest.class );
     }
 
     // test main
+    @Test
     public void testApp()
     {   
         System.out.println("App test:");
         com.iankoulski.problems.ccibook.tg.RouteBetweenNodes.main(null);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     public Graph<Integer> getTestData(){
@@ -69,27 +56,30 @@ public class RouteBetweenNodesTest
         return g;        
     }
 
+    @Test
     public void testRouteExists()
     {
         Graph<Integer> g = getTestData();
         RouteBetweenNodes rbn = new RouteBetweenNodes();
         boolean pathExists = rbn.pathExists(g,g.nodes[0],g.nodes[8]);
-        assertTrue(pathExists);
+        Assert.assertTrue(pathExists);
     }
 
+    @Test
     public void testNoRoute()
     {
         Graph<Integer> g = getTestData();
         RouteBetweenNodes rbn = new RouteBetweenNodes();
         boolean pathExists = rbn.pathExists(g,g.nodes[1],g.nodes[9]);
-        assertFalse(pathExists);
+        Assert.assertFalse(pathExists);
     }
 
+    @Test
     public void testRouteOneSixExists(){
         Graph<Integer> g = getTestData();
         RouteBetweenNodes rbn = new RouteBetweenNodes();
         boolean pathExists = rbn.pathExists(g,g.nodes[1],g.nodes[6]);
-        assertTrue(pathExists);
+        Assert.assertTrue(pathExists);
     }
 
 }

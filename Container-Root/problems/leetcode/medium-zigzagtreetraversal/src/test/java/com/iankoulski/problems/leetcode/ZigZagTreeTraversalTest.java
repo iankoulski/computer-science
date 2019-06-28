@@ -1,39 +1,23 @@
 package com.iankoulski.problems.leetcode;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class ZigZagTreeTraversalTest 
-    extends TestCase
+public class ZigZagTreeTraversalTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public ZigZagTreeTraversalTest ( String testName )
+    public ZigZagTreeTraversalTest ( )
     {
-        super( testName );
+        super( ZigZagTreeTraversalTest.class );
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( ZigZagTreeTraversalTest .class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
+    @Test
     public void testApp()
     {
 		com.iankoulski.problems.leetcode.ZigZagTreeTraversal.main(null);
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 }

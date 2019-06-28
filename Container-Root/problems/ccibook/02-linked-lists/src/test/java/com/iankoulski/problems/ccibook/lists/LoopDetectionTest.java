@@ -1,42 +1,29 @@
 package com.iankoulski.problems.ccibook.lists;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class LoopDetectionTest 
-    extends TestCase
+public class LoopDetectionTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public LoopDetectionTest( String testName )
+    public LoopDetectionTest( )
     {
-        super( testName );
+        super( LoopDetectionTest.class);
         ld = new LoopDetection();
     }
 
     private LoopDetection ld;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( LoopDetectionTest.class );
-    }
-
     // test main
+    @Test
     public void testApp()
     {   
         System.out.println("App test:");
         com.iankoulski.problems.ccibook.lists.LoopDetection.main(null);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     Node getLinkedListWithLoop(){
@@ -63,17 +50,19 @@ public class LoopDetectionTest
     } 
 
     // Input: 1->2->3->4->5->6->7->8->9->4
+    @Test
     public void testLoopDetectionByHash()
     {
         Node n = getLinkedListWithLoop();
         Node result = ld.findLoopByHash(n);
-        assertEquals(4,result.data);   
+        Assert.assertEquals(4,result.data);   
     }
 
+    @Test
     public void testLoopDetectionByRunner(){
         Node n = getLinkedListWithLoop();
         Node result = ld.findLoopByRunner(n);
-        assertEquals(4,result.data);
+        Assert.assertEquals(4,result.data);
     }
 
 }

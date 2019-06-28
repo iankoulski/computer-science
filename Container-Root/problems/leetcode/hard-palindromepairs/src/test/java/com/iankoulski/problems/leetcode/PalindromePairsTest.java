@@ -1,43 +1,29 @@
 package com.iankoulski.problems.leetcode;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import java.util.*;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
 
 /**
  * Unit test for simple App.
  */
-public class PalindromePairsTest 
-    extends TestCase
+public class PalindromePairsTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public PalindromePairsTest( String testName )
+
+    public PalindromePairsTest( )
     {
-        super( testName );
+        super( PalindromePairsTest.class );
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( PalindromePairsTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
+    @Test
     public void testApp()
     {
 		String[] words = new String[] {"tab","bat","lls","sssll"};
 		com.iankoulski.problems.leetcode.PalindromePairs.main(words);
 		PalindromePairsSolution pps = new PalindromePairsSolution();
 		List<List<Integer>> pp = pps.palindromePairs(words);
-        assertTrue( "[[0, 1], [1, 0], [2, 3]]".equals(pp.toString()) );
+        Assert.assertTrue( "[[0, 1], [1, 0], [2, 3]]".equals(pp.toString()) );
     }
 }

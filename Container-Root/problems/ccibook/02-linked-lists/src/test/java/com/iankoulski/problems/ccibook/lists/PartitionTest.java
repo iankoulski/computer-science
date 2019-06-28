@@ -1,45 +1,34 @@
 package com.iankoulski.problems.ccibook.lists;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import org.junit.runners.model.TestClass;
+
+import org.junit.Assert;
 
 /**
  * Unit test for simple App.
  */
-public class PartitionTest 
-    extends TestCase
+public class PartitionTest extends TestClass
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public PartitionTest( String testName )
+    public PartitionTest( )
     {
-        super( testName );
+        super( PartitionTest.class );
         p = new Partition();
     }
 
     private Partition p;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( PartitionTest.class );
-    }
-
     // test main
+    @Test
     public void testApp()
     {   
         System.out.println("App test:");
         com.iankoulski.problems.ccibook.lists.Partition.main(null);
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
     // Input: 1->2->5->3->6->4
+    @Test
     public void testPartition()
     {
         Node n1 = new Node(1);
@@ -59,7 +48,7 @@ public class PartitionTest
         String strResult = p.toString(result);
         System.out.println("Input: 1->2->5->3->6->4");
         System.out.println("Output: " + strResult); 
-        assertEquals("4->3->2->1->5->6",strResult);   
+        Assert.assertEquals("4->3->2->1->5->6",strResult);   
     }
 
 }
