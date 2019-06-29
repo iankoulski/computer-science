@@ -62,25 +62,26 @@ public class CheckBalanced {
         System.out.println("\n=========================^ Check Balanced ^======================\n");
     }
 
-    public boolean isBalanced(BinaryTreeNode<Integer> node){
-        if (node==null) return false;
+    // Time: O(N), space O(H)
+    public boolean isBalanced(BinaryTreeNode<Integer> root){
+        if (root==null) return false;
         try{
-            int heightLeft = getHeight(node.left);
-            int heightRight = getHeight(node.right);
+            int heightLeft = getHeight(root.left);
+            int heightRight = getHeight(root.right);
             int diff = Math.abs(heightLeft-heightRight);
             if (diff>1) return false;            
-        }catch(DisbalancedTreeException dte) {
+        }catch(ImbalancedTreeException ite) {
             return false;
         }
         return true;
     }
 
-    private int getHeight(BinaryTreeNode<Integer> node) throws DisbalancedTreeException {
+    private int getHeight(BinaryTreeNode<Integer> node) throws ImbalancedTreeException {
         if (node==null) return 0;
         int heightLeft = getHeight(node.left);
         int heightRight = getHeight(node.right);
         int diff = Math.abs(heightLeft-heightRight);
-        if (diff>1) throw new DisbalancedTreeException();
+        if (diff>1) throw new ImbalancedTreeException();
         return Math.max(heightLeft,heightRight)+1;
     }
 
@@ -117,10 +118,10 @@ public class CheckBalanced {
         return five;
     }
 
-    class DisbalancedTreeException extends RuntimeException{
+    class ImbalancedTreeException extends RuntimeException{
         private static final long serialVersionUID = 1L;
 
-        public DisbalancedTreeException() {
+        public ImbalancedTreeException() {
             super();
         }
     }
