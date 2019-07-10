@@ -1,9 +1,5 @@
 package com.iankoulski.problems.ccibook.tg;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 /*
 Problem: 
 Create a function to check if a binary tree is balanced. A tree is balanced if the hights 
