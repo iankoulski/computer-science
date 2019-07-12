@@ -4,6 +4,7 @@
 .settings
 .classpath
 *.code-workspace
+.DS_Store
 
 *.class
 

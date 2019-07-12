@@ -98,6 +98,8 @@ public class MergeSort {
     }
 
     // starts the sort
+    // Time O(n log n) - all cases
+    // Space O(n)
     public void mergeSort(int direction){
         Long ts = Calendar.getInstance().getTimeInMillis();
         this.direction = direction;

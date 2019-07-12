@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 
 /**
- * Created by 200018807 on 9/13/2016.
+ * Created by Alex Iankoulski on 9/13/2016.
  */
 public class QuickSort {
 
@@ -16,6 +16,8 @@ public class QuickSort {
         this.array = unsortedArray;
     }
 
+    // Time O(n.log n) best and average case, O(n2)-worst if already sorted
+    // Space O(1)
     public void sort(int direction) {
         long ts = Calendar.getInstance().getTimeInMillis();
         this.direction = direction;

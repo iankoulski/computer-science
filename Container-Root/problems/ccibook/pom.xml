@@ -27,5 +27,6 @@
     <module>02-linked-lists</module>
     <module>03-stacks-queues</module>
     <module>04-trees-graphs</module>
+    <module>05-bit-manipulation</module>
   </modules>
 </project>
