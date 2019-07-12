@@ -69,12 +69,14 @@ public class Insertion
     } 
 
     int insertIntBits(int N, int M, int i, int j) {
-        // 1) create mask
+        // 1) Create mask
         int ones = ~0;
         int left = ones << (j+1);
         int right = (1 << i) -1;
         int mask = left | right;
+        // 2) Clean N
         int nClean = N & mask;
+        // 3) Insert M
         int mShift = M << i;
         int inserted = nClean | mShift;
         return inserted;
