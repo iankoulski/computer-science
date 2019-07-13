@@ -29,5 +29,6 @@
     <module>hard-palindromepairs</module>
     <module>medium-integerbreak</module>
     <module>medium-zigzagtreetraversal</module>
+    <module>medium-wordbreak1</module>
   </modules>
 </project>

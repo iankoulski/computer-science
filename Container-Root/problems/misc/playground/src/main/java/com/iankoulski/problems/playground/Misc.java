@@ -13,10 +13,16 @@ public class Misc
 		System.out.println("\n\nvvvvvvvvvvvvvvvvvvvvvvvvv Miscellaneous vvvvvvvvvvvvvvvvvvvvvvvvvv \n");
 		Misc m = new Misc();
 		System.out.println(m.sayHello("Alex"));
-    	System.out.println("\n^^^^^^^^^^^^^^^^^^^^^^^^^ Miscellaneous ^^^^^^^^^^^^^^^^^^^^^^^^^^ \n");
+		m.play();
+		System.out.println("\n^^^^^^^^^^^^^^^^^^^^^^^^^ Miscellaneous ^^^^^^^^^^^^^^^^^^^^^^^^^^ \n");
+		
     }
 
 	public String sayHello(String name) {
 		return name == null ? "Hello!" : "Hello, "+name+"!";
+	}
+
+	public void play(){
+		System.out.println("Play with Java.");
 	}
 }
