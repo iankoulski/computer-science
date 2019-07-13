@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.iankoulski</groupId>
-    <artifactId>computer-science</artifactId>
+    <groupId>com.iankoulski.problems</groupId>
+    <artifactId>problems</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.iankoulski.problems</groupId>
-  <artifactId>problems</artifactId>
+  <groupId>com.iankoulski.problems.misc</groupId>
+  <artifactId>misc</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>misc</name>
   <packaging>pom</packaging>
-  <name>problems</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -23,8 +23,6 @@
     </dependency>
   </dependencies>
   <modules>
-    <module>leetcode</module>
-    <module>ccibook</module>
-    <module>misc</module>
+    <module>playground</module>
   </modules>
 </project>
