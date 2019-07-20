@@ -9,7 +9,7 @@ public class TypeExamples
     public static void main( String[] args )
     {
         System.out.println( "Examples of Java types" );
-	// TODO: add boolean, char, int, String? 
+	// TODO: add boolean, char, int, Integer, String? 
 	// int long float BigInt, etc';
     }
 }
