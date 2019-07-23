@@ -24,5 +24,6 @@ public class Misc
 
 	public void play(){
 		System.out.println("Play with Java.");
+
 	}
 }
